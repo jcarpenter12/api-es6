@@ -2,7 +2,7 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import User from './User';
+import User from './UserModel';
 
 const router = express.Router();
 router.use(bodyParser.urlencoded({
@@ -61,6 +61,5 @@ router.delete(':/id', function(req, res) {
     res.status(200).send("User " + user.name + " was deleted.");
   });
 });
-
 
 export default router;
