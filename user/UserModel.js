@@ -1,6 +1,6 @@
 // user.js
 
-import mongoose from '../db.js';
+import mongoose from 'mongoose';
 
 class User extends mongoose.Schema {
   constructor() {
