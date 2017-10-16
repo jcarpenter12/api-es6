@@ -5,6 +5,9 @@ import {
   URI
 } from '../constants';
 
+//set mongoose promises
+mongoose.Promise = global.Promise;
+
 const connect = () => {
   const serverOptions = {
     auto_reconnect: true,
