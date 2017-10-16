@@ -1,6 +1,10 @@
 // db.js
 
 import mongoose from 'mongoose';
+import {
+  USER,
+  PASSWORD
+} from '/constants';
 
 const serverOptions = {
   poolSize: 100,
@@ -9,7 +13,11 @@ const serverOptions = {
   }
 };
 
-const db = mongoose.connect('mongodb://jcarpent:password123@ds040837.mlab.com:40837/test_api', {
+const URI = 'mongodb://' + USER + ':' + PASSWORD + '@ds040837.mlab.com:40837/test_api';
+
+console.log(URI);
+
+const db = mongoose.connect(URI, {
   useMongoClient: true,
   server: serverOptions,
   replset: serverOptions
